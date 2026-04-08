@@ -1,3 +1,3 @@
-password = "123456"
+password = input("Enter password: ")
 
 print("Hello DevSecOps UDATED")
