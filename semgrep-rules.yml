@@ -1,6 +1,6 @@
-rules:
-- id: hardcoded-password
-  pattern: password = $VALUE
-  message: Hardcoded password detected
+\rules:
+- id: detect-print
+  pattern: print(...)
+  message: Print statement detected
   severity: ERROR
   languages: [python]

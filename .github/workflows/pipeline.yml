@@ -1,6 +1,9 @@
 name: DevSecOps Pipeline
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -18,8 +21,8 @@ jobs:
     - name: Install Semgrep
       run: pip install semgrep
 
-    - name: Run Semgrep Scan
-      run: semgrep scan --config=p/security-audit
+    - name: Run Semgrep Scan (Security Gate)
+      run: semgrep --config=semgrep-rules.yml --error
 
     - name: Run App
       run: python app.py

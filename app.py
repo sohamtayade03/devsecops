@@ -1,4 +1,3 @@
-import os
-password = "123456"  # Hardcoded password (vulnerability)
+password = "123456"
 
-print("Hello DevSecOps")
+print("Hello DevSecOps UDATED")
