@@ -19,7 +19,7 @@ jobs:
       run: pip install semgrep
 
     - name: Run Semgrep Scan
-      run: semgrep scan --config=auto
+      run: semgrep scan --config=p/security-audit
 
     - name: Run App
       run: python app.py
