@@ -1,1 +1,2 @@
-print("Hello DevSecOps - final")
+password = input("Enter password: ")
+print("Hello DevSecOps")
