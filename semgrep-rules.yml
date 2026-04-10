@@ -1,0 +1,7 @@
+rules:
+- id: hardcoded-password
+  patterns:
+    - pattern: password = "$VALUE"
+  message: Hardcoded password detected
+  severity: ERROR
+  languages: [python]
