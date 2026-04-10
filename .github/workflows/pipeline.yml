@@ -10,19 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-    - name: Setup Python
-      uses: actions/setup-python@v4
+    - uses: actions/setup-python@v4
       with:
         python-version: '3.10'
 
-    - name: Install Semgrep
-      run: pip install semgrep
+    - run: pip install semgrep
 
-    - name: Run Semgrep Scan (Security Gate)
-      run: semgrep --config=semgrep-rules.yml --error
+    - run: semgrep --config=semgrep-rules.yml --error
 
-    - name: Run App
-      run: python app.py
+    - run: python app.py
